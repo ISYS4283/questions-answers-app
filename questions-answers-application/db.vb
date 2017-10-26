@@ -40,4 +40,21 @@ Public Class db
             End If
         End Try
     End Sub
+
+    'execute a DLM statement'
+    Public Sub execute(ByRef dgv As DataGridView)
+
+
+        Try
+            connection.Open()
+            command.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Throw ex
+        Finally
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
+        End Try
+    End Sub
 End Class
