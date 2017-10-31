@@ -79,6 +79,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="db.vb" />
+    <Compile Include="UpdateQuestion.Designer.vb">
+      <DependentUpon>UpdateQuestion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateQuestion.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="welcome.vb">
       <SubType>Form</SubType>
     </Compile>
