@@ -16,6 +16,11 @@ Public Class db
             command.CommandText = value
         End Set
     End Property
+
+    'bind sql parameters
+    Public Sub bind(ByVal parameter As String, ByRef value As Object)
+        command.Parameters.AddWithValue(parameter, value)
+    End Sub
     ' populate a data grid view
     Public Sub fill(ByRef dgv As DataGridView)
         Dim adapter As SqlDataAdapter
