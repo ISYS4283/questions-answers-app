@@ -20,6 +20,15 @@ Public Class welcome
     End Sub
 
     Private Sub UpdateQuestionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateQuestionToolStripMenuItem.Click
-
+        Dim updateQuestionForm As New UpdateQuestion(getQuestionId())
+        updateQuestionForm.ShowDialog()
     End Sub
+
+    Public Function getQuestionId() As Integer
+        Return dgvQuestions.Item("id", dgvQuestions.CurrentRow.Index).Value
+    End Function
+
+    Public Function getQuestionValue(ByVal column As String)
+        Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
+    End Function
 End Class

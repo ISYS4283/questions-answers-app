@@ -118,6 +118,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UpdateQuestion.resx">
+      <DependentUpon>UpdateQuestion.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="welcome.resx">
       <DependentUpon>welcome.vb</DependentUpon>
     </EmbeddedResource>

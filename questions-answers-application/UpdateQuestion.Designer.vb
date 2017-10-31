@@ -22,8 +22,41 @@ Partial Class UpdateQuestion
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
+        Me.TbUpdateQuestion = New System.Windows.Forms.TextBox()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
+        Me.SuspendLayout()
+        '
+        'TbUpdateQuestion
+        '
+        Me.TbUpdateQuestion.Location = New System.Drawing.Point(60, 48)
+        Me.TbUpdateQuestion.Multiline = True
+        Me.TbUpdateQuestion.Name = "TbUpdateQuestion"
+        Me.TbUpdateQuestion.Size = New System.Drawing.Size(508, 219)
+        Me.TbUpdateQuestion.TabIndex = 0
+        '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.Location = New System.Drawing.Point(60, 299)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(508, 47)
+        Me.BtnUpdate.TabIndex = 1
+        Me.BtnUpdate.Text = "Submit"
+        Me.BtnUpdate.UseVisualStyleBackColor = True
+        '
+        'UpdateQuestion
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(622, 389)
+        Me.Controls.Add(Me.BtnUpdate)
+        Me.Controls.Add(Me.TbUpdateQuestion)
+        Me.Name = "UpdateQuestion"
         Me.Text = "UpdateQuestion"
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
     End Sub
+
+    Friend WithEvents TbUpdateQuestion As TextBox
+    Friend WithEvents BtnUpdate As Button
 End Class
