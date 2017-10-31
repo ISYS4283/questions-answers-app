@@ -18,4 +18,21 @@ Public Class welcome
         CreateQuestions.ShowDialog()
         LoadQuestions()
     End Sub
+
+    Private Sub UpdateQuestionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateQuestionToolStripMenuItem.Click
+        Dim updateQuestionForm As New UpdateQuestion(getQeustionId())
+        updateQuestionForm.ShowDialog()
+        LoadQuestions()
+    End Sub
+    ' below function shows the original question so we can see and change it
+    Public Function getQeustionId() As Integer
+        ' Return dgvQuestions.Item("id", dgvQuestions.CurrentRow.Index).Value
+        Return getQuestionValue("id")
+
+    End Function
+
+    Public Function getQuestionValue(ByVal column As String)
+        Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
+
+    End Function
 End Class
