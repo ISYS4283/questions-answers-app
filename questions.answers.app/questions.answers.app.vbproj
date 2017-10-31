@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01DDA96F-ED11-47A1-81BD-0EDDA2651C48}</ProjectGuid>
+    <ProjectGuid>{890ACF2A-6DAD-433F-B7F8-F834BD8239FB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>questions_answers_application.My.MyApplication</StartupObject>
-    <RootNamespace>questions_answers_application</RootNamespace>
-    <AssemblyName>questions-answers-application</AssemblyName>
+    <StartupObject>questions.answers.app.My.MyApplication</StartupObject>
+    <RootNamespace>questions.answers.app</RootNamespace>
+    <AssemblyName>questions.answers.app</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
@@ -21,7 +21,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>questions-answers-application.xml</DocumentationFile>
+    <DocumentationFile>questions.answers.app.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>questions-answers-application.xml</DocumentationFile>
+    <DocumentationFile>questions.answers.app.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -72,24 +72,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="createQuestion.Designer.vb">
-      <DependentUpon>createQuestion.vb</DependentUpon>
+    <Compile Include="createQestions.Designer.vb">
+      <DependentUpon>createQestions.vb</DependentUpon>
     </Compile>
-    <Compile Include="createQuestion.vb">
+    <Compile Include="createQestions.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="db.vb" />
-    <Compile Include="updateQuestion.Designer.vb">
-      <DependentUpon>updateQuestion.vb</DependentUpon>
-    </Compile>
-    <Compile Include="updateQuestion.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="welcome.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="welcome.Designer.vb">
-      <DependentUpon>welcome.vb</DependentUpon>
+    <Compile Include="Form1.vb" />
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -109,20 +100,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="createQuestion.resx">
-      <DependentUpon>createQuestion.vb</DependentUpon>
+    <EmbeddedResource Include="createQestions.resx">
+      <DependentUpon>createQestions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="updateQuestion.resx">
-      <DependentUpon>updateQuestion.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="welcome.resx">
-      <DependentUpon>welcome.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
