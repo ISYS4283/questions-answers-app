@@ -18,4 +18,8 @@ Public Class welcome
         CreateQuestion.ShowDialog()
         LoadQuestions()
     End Sub
+
+    Private Sub UpdateQuestionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateQuestionToolStripMenuItem.Click
+
+    End Sub
 End Class
