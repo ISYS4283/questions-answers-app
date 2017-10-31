@@ -14,19 +14,27 @@ Public Class db
 
         End Set
     End Property
+
+    'bind sql parmeters
+    Public Sub bind(ByVal parameter As String, ByRef value As Object)
+        sqlcmd.Parameters.AddWithValue(parameter, value)
+
+    End Sub
+
+    'populate a data gridview
     Public Sub fill(ByRef dgv As DataGridView)
-        Dim sqlda As SqlDataAdapter
-        Dim sqldataset As DataSet
+        Dim adapter As SqlDataAdapter
+        Dim dataset As DataSet
 
         Try
             sqlcon.Open()
 
-            sqlda = New SqlDataAdapter(sqlcmd)
-            sqldataset = New DataSet
-            sqlda.Fill(sqldataset)
-            If sqldataset.Tables.Count > 0 Then
+            adapter = New SqlDataAdapter(sqlcmd)
+            dataset = New DataSet
+            adapter.Fill(dataset)
+            If dataset.Tables.Count > 0 Then
                 dgv.Refresh()
-                dgv.DataSource = sqldataset.Tables(0)
+                dgv.DataSource = dataset.Tables(0)
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -37,4 +45,23 @@ Public Class db
             End If
         End Try
     End Sub
+
+    'execute a DLM statement'
+
+    Public Sub Execute()
+
+        Try
+            sqlcon.Open()
+            sqlcmd.ExecuteNonQuery()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Throw ex
+        Finally
+            If sqlcon.State = ConnectionState.Open Then
+                sqlcon.Close()
+
+            End If
+        End Try
+    End Sub
 End Class
+
