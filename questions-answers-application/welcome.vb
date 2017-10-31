@@ -16,5 +16,6 @@ Public Class welcome
 
     Private Sub CreateQuestionsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateQuestionsToolStripMenuItem.Click
         CreateQuestions.ShowDialog()
+        LoadQuestions()
     End Sub
 End Class
