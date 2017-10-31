@@ -46,7 +46,7 @@ Public Class db
     End Sub
 
     'execute a DLM statement'
-    Public Sub execute(ByRef dgv As DataGridView)
+    Public Sub execute()
 
 
         Try
