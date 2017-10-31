@@ -1,9 +1,11 @@
 ﻿Public Class Createquestion
-    Private Sub TBQuestion_TextChanged(sender As Object, e As EventArgs) Handles TBQuestion.TextChanged
+    Protected db As db = New db
 
-    End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-
+    Private Sub btnQuestionSubmit_Click(sender As Object, e As EventArgs) Handles btnQuestionSubmit.Click
+        db.sql = "Insert Into questions (question) Values (@question)"
+        db.bind("@question", TBQuestion.Text)
+        db.execute()
+        Me.Dispose()
     End Sub
 End Class

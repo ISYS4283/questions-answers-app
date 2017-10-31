@@ -23,7 +23,7 @@ Partial Class Createquestion
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.TBQuestion = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnQuestionSubmit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TBQuestion
@@ -34,21 +34,21 @@ Partial Class Createquestion
         Me.TBQuestion.Size = New System.Drawing.Size(230, 20)
         Me.TBQuestion.TabIndex = 0
         '
-        'Button1
+        'btnQuestionSubmit
         '
-        Me.Button1.Location = New System.Drawing.Point(184, 254)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnQuestionSubmit.Location = New System.Drawing.Point(184, 254)
+        Me.btnQuestionSubmit.Name = "btnQuestionSubmit"
+        Me.btnQuestionSubmit.Size = New System.Drawing.Size(75, 23)
+        Me.btnQuestionSubmit.TabIndex = 1
+        Me.btnQuestionSubmit.Text = "Submit"
+        Me.btnQuestionSubmit.UseVisualStyleBackColor = True
         '
         'Createquestion
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(487, 452)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnQuestionSubmit)
         Me.Controls.Add(Me.TBQuestion)
         Me.Name = "Createquestion"
         Me.Text = "Createquestion"
@@ -58,5 +58,5 @@ Partial Class Createquestion
     End Sub
 
     Friend WithEvents TBQuestion As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnQuestionSubmit As Button
 End Class
