@@ -24,6 +24,7 @@ Partial Class welcome
     Private Sub InitializeComponent()
         Me.welcomeMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.LoadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreateQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgvQuestions = New System.Windows.Forms.DataGridView()
         Me.welcomeMenuStrip.SuspendLayout()
         CType(Me.dgvQuestions, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -31,7 +32,7 @@ Partial Class welcome
         '
         'welcomeMenuStrip
         '
-        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem})
+        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem, Me.CreateQuestionToolStripMenuItem})
         Me.welcomeMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.welcomeMenuStrip.Name = "welcomeMenuStrip"
         Me.welcomeMenuStrip.Size = New System.Drawing.Size(1014, 24)
@@ -43,6 +44,12 @@ Partial Class welcome
         Me.LoadToolStripMenuItem.Name = "LoadToolStripMenuItem"
         Me.LoadToolStripMenuItem.Size = New System.Drawing.Size(140, 20)
         Me.LoadToolStripMenuItem.Text = "Load Recent Questions"
+        '
+        'CreateQuestionToolStripMenuItem
+        '
+        Me.CreateQuestionToolStripMenuItem.Name = "CreateQuestionToolStripMenuItem"
+        Me.CreateQuestionToolStripMenuItem.Size = New System.Drawing.Size(104, 20)
+        Me.CreateQuestionToolStripMenuItem.Text = "Create Question"
         '
         'dgvQuestions
         '
@@ -78,4 +85,5 @@ Partial Class welcome
     Friend WithEvents welcomeMenuStrip As MenuStrip
     Friend WithEvents LoadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents dgvQuestions As DataGridView
+    Friend WithEvents CreateQuestionToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -40,4 +40,26 @@ Public Class db
             End If
         End Try
     End Sub
+
+    ' bind sql parameters
+    Public Sub bind(ByVal parameter As String, ByRef value As Object)
+        command.Parameters.AddWithValue(parameter, value)
+    End Sub
+
+    ' execute dml statement
+    Public Sub execute()
+
+        Try
+            connection.Open()
+            command.ExecuteNonQuery()
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Throw ex
+        Finally
+            If connection.State = ConnectionState.Open Then
+                connection.Close()
+            End If
+        End Try
+    End Sub
 End Class
