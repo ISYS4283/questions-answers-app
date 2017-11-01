@@ -14,4 +14,24 @@ Public Class welcome
         LoadQuestions()
     End Sub
 
+    Private Sub CreateQuestionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateQuestionToolStripMenuItem.Click
+        CreateQuestion.ShowDialog()
+        LoadQuestions()
+    End Sub
+
+    Private Sub UpdateQuestionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateQuestionToolStripMenuItem.Click
+        Dim updateQuestionFrom As New UpdateQuestion(getQuestionId())
+        updateQuestionFrom.ShowDialog()
+        LoadQuestions()
+
+    End Sub
+
+    Public Function getQuestionId() As Integer
+        Return getQuestionValue("id")
+    End Function
+
+    Public Function getQuestionValue(ByVal column As String)
+        Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
+    End Function
+
 End Class
