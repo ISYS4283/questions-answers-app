@@ -41,6 +41,10 @@ Public Class db
         End Try
     End Sub
 
+    ' bind sql parameters
+    Public Sub bind(ByVal parameter As String, ByRef value As Object)
+        command.Parameters.AddWithValue(parameter, value)
+    End Sub
 
     ' execute dml statement
     Public Sub execute()

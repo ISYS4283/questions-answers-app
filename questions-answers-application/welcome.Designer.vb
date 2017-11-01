@@ -24,15 +24,16 @@ Partial Class welcome
     Private Sub InitializeComponent()
         Me.welcomeMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.LoadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dgvQuestions = New System.Windows.Forms.DataGridView()
         Me.CreateQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dgvQuestions = New System.Windows.Forms.DataGridView()
+        Me.UpdateQuestionsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.welcomeMenuStrip.SuspendLayout()
         CType(Me.dgvQuestions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'welcomeMenuStrip
         '
-        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem, Me.CreateQuestionToolStripMenuItem})
+        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem, Me.CreateQuestionToolStripMenuItem, Me.UpdateQuestionsToolStripMenuItem})
         Me.welcomeMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.welcomeMenuStrip.Name = "welcomeMenuStrip"
         Me.welcomeMenuStrip.Size = New System.Drawing.Size(1014, 24)
@@ -44,6 +45,12 @@ Partial Class welcome
         Me.LoadToolStripMenuItem.Name = "LoadToolStripMenuItem"
         Me.LoadToolStripMenuItem.Size = New System.Drawing.Size(140, 20)
         Me.LoadToolStripMenuItem.Text = "Load Recent Questions"
+        '
+        'CreateQuestionToolStripMenuItem
+        '
+        Me.CreateQuestionToolStripMenuItem.Name = "CreateQuestionToolStripMenuItem"
+        Me.CreateQuestionToolStripMenuItem.Size = New System.Drawing.Size(104, 20)
+        Me.CreateQuestionToolStripMenuItem.Text = "Create Question"
         '
         'dgvQuestions
         '
@@ -58,11 +65,11 @@ Partial Class welcome
         Me.dgvQuestions.Size = New System.Drawing.Size(1014, 586)
         Me.dgvQuestions.TabIndex = 1
         '
-        'CreateQuestionToolStripMenuItem
+        'UpdateQuestionsToolStripMenuItem
         '
-        Me.CreateQuestionToolStripMenuItem.Name = "CreateQuestionToolStripMenuItem"
-        Me.CreateQuestionToolStripMenuItem.Size = New System.Drawing.Size(104, 20)
-        Me.CreateQuestionToolStripMenuItem.Text = "Create Question"
+        Me.UpdateQuestionsToolStripMenuItem.Name = "UpdateQuestionsToolStripMenuItem"
+        Me.UpdateQuestionsToolStripMenuItem.Size = New System.Drawing.Size(113, 20)
+        Me.UpdateQuestionsToolStripMenuItem.Text = "Update Questions"
         '
         'welcome
         '
@@ -86,4 +93,5 @@ Partial Class welcome
     Friend WithEvents LoadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents dgvQuestions As DataGridView
     Friend WithEvents CreateQuestionToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents UpdateQuestionsToolStripMenuItem As ToolStripMenuItem
 End Class
