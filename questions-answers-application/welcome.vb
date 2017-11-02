@@ -42,4 +42,11 @@ Public Class welcome
             'MsgBox("Deleted")
         End If
     End Sub
+
+
+    Private Sub ShowAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswerToolStripMenuItem.Click
+        Dim answersForm As New UpdateQuestion(getQuestionId())
+        answersForm.ShowDialog()
+        LoadQuestions()
+    End Sub
 End Class
