@@ -42,4 +42,12 @@ Public Class welcome
             LoadQuestions()
         End If
     End Sub
+
+    Private Sub ShowAnswersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswersToolStripMenuItem.Click
+        Dim answersform As New AnswersForm(getQuestionId())
+        answersform.ShowDialog()
+
+    End Sub
 End Class
+' make a new form that looks at answers for a question based on the question ID, pull all answers for question ID, new, update, delete. 
+' 
