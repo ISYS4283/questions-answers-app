@@ -42,4 +42,11 @@ Public Class welcome
             LoadQuestions()
         End If
     End Sub
+
+    Private Sub ShortToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShortToolStripMenuItem.Click
+        Dim answersForm As New AnswersForm(getQuestionId())
+        answersForm.ShowDialog()
+    End Sub
+
+
 End Class
