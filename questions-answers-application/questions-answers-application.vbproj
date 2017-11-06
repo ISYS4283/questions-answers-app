@@ -78,6 +78,12 @@
     <Compile Include="AsnwersForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CreateAnswerForm.Designer.vb">
+      <DependentUpon>CreateAnswerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAnswerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateQuestion.Designer.vb">
       <DependentUpon>CreateQuestion.vb</DependentUpon>
     </Compile>
@@ -117,6 +123,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AsnwersForm.resx">
       <DependentUpon>AsnwersForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAnswerForm.resx">
+      <DependentUpon>CreateAnswerForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateQuestion.resx">
       <DependentUpon>CreateQuestion.vb</DependentUpon>

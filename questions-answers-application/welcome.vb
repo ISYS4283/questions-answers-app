@@ -44,9 +44,24 @@ Public Class welcome
     End Sub
 
 
+
+
+    'Private Sub ShowAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswerToolStripMenuItem.Click
+
+    '    db.sql = "SELECT * FROM answers ORDER BY created_at DESC;"
+    '    db.fill(dgvQuestions)
+
+    'End Sub
+    Protected Sub LoadAnswers()
+        db.sql = "SELECT * FROM answers ORDER BY created_at DESC;"
+        db.fill(dgvQuestions)
+    End Sub
     Private Sub ShowAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswerToolStripMenuItem.Click
-        Dim answersForm As New UpdateQuestion(getQuestionId())
-        answersForm.ShowDialog()
-        LoadQuestions()
+        LoadAnswers()
+    End Sub
+
+    Private Sub CreateAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateAnswerToolStripMenuItem.Click
+        CreateAnswerForm.ShowDialog()
+        LoadAnswers()
     End Sub
 End Class
