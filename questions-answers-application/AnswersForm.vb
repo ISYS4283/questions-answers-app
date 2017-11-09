@@ -39,4 +39,10 @@
     Public Function getAnswerValue(ByVal column As String)
         Return dgvAnswers.Item(column, dgvAnswers.CurrentRow.Index).Value
     End Function
+
+    Private Sub CreateAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateAnswerToolStripMenuItem.Click
+        Dim CreateAnswerForm As New CreateAnswer(question_id)
+        CreateAnswerForm.ShowDialog()
+        LoadAnswers()
+    End Sub
 End Class
