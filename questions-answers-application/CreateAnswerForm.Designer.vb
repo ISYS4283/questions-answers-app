@@ -23,7 +23,7 @@ Partial Class CreateAnswerForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.SubmitAnswerButton = New System.Windows.Forms.Button()
-        Me.tbrAnswerTextBox = New System.Windows.Forms.TextBox()
+        Me.tbCreateAnswerTextBox = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'SubmitAnswerButton
@@ -35,20 +35,20 @@ Partial Class CreateAnswerForm
         Me.SubmitAnswerButton.Text = "Submit"
         Me.SubmitAnswerButton.UseVisualStyleBackColor = True
         '
-        'tbrAnswerTextBox
+        'tbCreateAnswerTextBox
         '
-        Me.tbrAnswerTextBox.Location = New System.Drawing.Point(12, 28)
-        Me.tbrAnswerTextBox.Multiline = True
-        Me.tbrAnswerTextBox.Name = "tbrAnswerTextBox"
-        Me.tbrAnswerTextBox.Size = New System.Drawing.Size(595, 221)
-        Me.tbrAnswerTextBox.TabIndex = 3
+        Me.tbCreateAnswerTextBox.Location = New System.Drawing.Point(12, 28)
+        Me.tbCreateAnswerTextBox.Multiline = True
+        Me.tbCreateAnswerTextBox.Name = "tbCreateAnswerTextBox"
+        Me.tbCreateAnswerTextBox.Size = New System.Drawing.Size(595, 221)
+        Me.tbCreateAnswerTextBox.TabIndex = 3
         '
         'CreateAnswerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(619, 441)
-        Me.Controls.Add(Me.tbrAnswerTextBox)
+        Me.Controls.Add(Me.tbCreateAnswerTextBox)
         Me.Controls.Add(Me.SubmitAnswerButton)
         Me.Name = "CreateAnswerForm"
         Me.Text = "CreateAnswerForm"
@@ -57,5 +57,5 @@ Partial Class CreateAnswerForm
 
     End Sub
     Friend WithEvents SubmitAnswerButton As Button
-    Friend WithEvents tbrAnswerTextBox As TextBox
+    Friend WithEvents tbCreateAnswerTextBox As TextBox
 End Class

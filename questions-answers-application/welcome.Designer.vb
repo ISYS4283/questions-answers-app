@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class welcome
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class welcome
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.welcomeMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.LoadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -28,8 +28,10 @@ Partial Class welcome
         Me.UpdateQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowAnswerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.dgvQuestions = New System.Windows.Forms.DataGridView()
         Me.CreateAnswerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.dgvQuestions = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.ExitButton = New System.Windows.Forms.Button()
         Me.welcomeMenuStrip.SuspendLayout()
         CType(Me.dgvQuestions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -37,7 +39,7 @@ Partial Class welcome
         'welcomeMenuStrip
         '
         Me.welcomeMenuStrip.ImageScalingSize = New System.Drawing.Size(24, 24)
-        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem, Me.CreateQuestionToolStripMenuItem, Me.UpdateQuestionToolStripMenuItem, Me.DeleteQuestionToolStripMenuItem, Me.ShowAnswerToolStripMenuItem, Me.CreateAnswerToolStripMenuItem})
+        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem, Me.CreateQuestionToolStripMenuItem, Me.UpdateQuestionToolStripMenuItem, Me.DeleteQuestionToolStripMenuItem, Me.CreateAnswerToolStripMenuItem, Me.ShowAnswerToolStripMenuItem})
         Me.welcomeMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.welcomeMenuStrip.Name = "welcomeMenuStrip"
         Me.welcomeMenuStrip.Padding = New System.Windows.Forms.Padding(9, 3, 0, 3)
@@ -75,6 +77,12 @@ Partial Class welcome
         Me.ShowAnswerToolStripMenuItem.Size = New System.Drawing.Size(131, 29)
         Me.ShowAnswerToolStripMenuItem.Text = "Show Answer"
         '
+        'CreateAnswerToolStripMenuItem
+        '
+        Me.CreateAnswerToolStripMenuItem.Name = "CreateAnswerToolStripMenuItem"
+        Me.CreateAnswerToolStripMenuItem.Size = New System.Drawing.Size(137, 29)
+        Me.CreateAnswerToolStripMenuItem.Text = "Create Answer"
+        '
         'dgvQuestions
         '
         Me.dgvQuestions.AllowUserToAddRows = False
@@ -89,17 +97,35 @@ Partial Class welcome
         Me.dgvQuestions.Size = New System.Drawing.Size(1521, 903)
         Me.dgvQuestions.TabIndex = 1
         '
-        'CreateAnswerToolStripMenuItem
+        'Button1
         '
-        Me.CreateAnswerToolStripMenuItem.Name = "CreateAnswerToolStripMenuItem"
-        Me.CreateAnswerToolStripMenuItem.Size = New System.Drawing.Size(137, 29)
-        Me.CreateAnswerToolStripMenuItem.Text = "Create Answer"
+        Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound
+        Me.Button1.ForeColor = System.Drawing.Color.Teal
+        Me.Button1.Location = New System.Drawing.Point(1008, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(311, 31)
+        Me.Button1.TabIndex = 2
+        Me.Button1.Text = "Show Questions with Answers" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'ExitButton
+        '
+        Me.ExitButton.AutoSize = True
+        Me.ExitButton.ForeColor = System.Drawing.Color.Teal
+        Me.ExitButton.Location = New System.Drawing.Point(1446, 0)
+        Me.ExitButton.Name = "ExitButton"
+        Me.ExitButton.Size = New System.Drawing.Size(75, 30)
+        Me.ExitButton.TabIndex = 3
+        Me.ExitButton.Text = "Exit"
+        Me.ExitButton.UseVisualStyleBackColor = True
         '
         'welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1521, 938)
+        Me.Controls.Add(Me.ExitButton)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvQuestions)
         Me.Controls.Add(Me.welcomeMenuStrip)
         Me.MainMenuStrip = Me.welcomeMenuStrip
@@ -122,4 +148,6 @@ Partial Class welcome
     Friend WithEvents DeleteQuestionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowAnswerToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CreateAnswerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button1 As Button
+    Friend WithEvents ExitButton As Button
 End Class

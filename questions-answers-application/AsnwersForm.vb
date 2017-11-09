@@ -1,34 +1,85 @@
-﻿Public Class dgvAsnwersForm
+﻿Public Class AnswersForm
     Protected db As New db
-
-    Protected Sub LoadAnswers()
+    'Show recent answers
+    Protected Sub LoadRecentAnswers()
         db.sql = "SELECT * FROM answers ORDER BY created_at DESC;"
         db.fill(dgvAnswer)
     End Sub
+    Protected Sub LoadQ()
+        db.sql = "SELECT * FROM questions ORDER BY created_at DESC;"
+        db.fill(dgvAnswer)
+    End Sub
+
+    Private Sub LoadRecentAnsButton_Click(sender As Object, e As EventArgs) Handles LoadRecentAnsButton.Click
+        LoadQ()
+    End Sub
+
+    Private Sub AsnwersForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        LoadRecentAnswers()
+
+    End Sub
+
+    'For loading answer based on question id
+
+    Protected Sub LoadAnswers()
+        db.sql = "SELECT * FROM answers WHERE question_id = ''ORDER BY created_at DESC;"
+        db.fill(dgvAnswer)
+    End Sub
     Private Sub LoadAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoadAnswerToolStripMenuItem.Click
-        LoadAnswers()
+        LoadRecentAnswers()
     End Sub
 
-    Private Sub dgvAsnwersForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadAnswers()
+    'Update quetion using question id
+    Private Sub UpdateAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateAnswerToolStripMenuItem.Click
+        ' Dim confirmed As Integer = MessageBox.Show("Please load answer first", "Update Answer", MessageBoxButtons.OK)
+        Dim updateAnswerForm As New UpdateAnswerForm(getAnswerId())
+        updateAnswerForm.ShowDialog()
+        LoadRecentAnswers()
+
     End Sub
 
 
-    'Public Function getQuestionId() As Integer
-    '    Return getQuestionValue("id")
-    'End Function
+    'To get quetion id on getQuestionId valiable 
+    Public Function getAnswerId() As Integer
+        Return getAnswerValue("id")
+    End Function
 
-    'Public Function getQuestionValue(ByVal column As String)
-    '    Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
-    'End Function
-
-
-
-
-
+    'To get question if value from current row selected yo update question 
+    Public Function getAnswerValue(ByVal column As String)
+        Return dgvAnswer.Item(column, dgvAnswer.CurrentRow.Index).Value
+    End Function
 
     Private Sub CreateAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateAnswerToolStripMenuItem.Click
-        CreateAnswerForm.ShowDialog()
-        LoadAnswers()
+
+    End Sub
+
+    Private Sub DeleteAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteAnswerToolStripMenuItem.Click
+        Dim confirmed As Integer = MessageBox.Show("Are you sure you want to delete this answer?", "Delete", MessageBoxButtons.YesNoCancel)
+        If confirmed = DialogResult.Yes Then
+            db.sql = "Delete FROM answers WHERE id = @answer_id"
+            db.bind("@answer_id", getAnswerId())
+            db.execute()
+            LoadRecentAnswers()
+            'MsgBox("Deleted")
+        End If
+    End Sub
+
+    Private Sub GoToWelcomePageToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GoToWelcomePageToolStripMenuItem.Click
+        Me.Hide()
+        welcome.Show()
+
+    End Sub
+    'Loading valid answer only
+    Protected Sub LoadValidAnswerOnly()
+        db.sql = "select * from answers where invalid <> 1"
+        db.fill(dgvAnswer)
+    End Sub
+    Private Sub FilterCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles FilterCheckBox.CheckedChanged
+        If FilterCheckBox.Checked = True Then
+            LoadValidAnswerOnly()
+        Else
+            LoadRecentAnswers()
+        End If
+
     End Sub
 End Class
