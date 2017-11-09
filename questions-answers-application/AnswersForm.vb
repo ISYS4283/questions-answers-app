@@ -25,4 +25,18 @@
     Private Sub AnswersForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadAnswers()
     End Sub
+
+    Private Sub DeleteaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteaToolStripMenuItem.Click
+        Dim confirmed As Integer = MessageBox.Show("Are you sure you want to delete this?", "Delete", MessageBoxButtons.YesNoCancel)
+
+        If confirmed = DialogResult.Yes Then
+            db.sql = "DELETE FROM answers WHERE id = @answer_id"
+            db.bind("@answer_id", getAnswerValue("id"))
+            db.execute()
+            LoadAnswers()
+        End If
+    End Sub
+    Public Function getAnswerValue(ByVal column As String)
+        Return dgvAnswers.Item(column, dgvAnswers.CurrentRow.Index).Value
+    End Function
 End Class
