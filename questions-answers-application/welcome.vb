@@ -48,5 +48,14 @@ Public Class welcome
         answersForm.ShowDialog()
     End Sub
 
+    Private Sub ShowInvalidToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowInvalidToolStripMenuItem.Click
+        Dim frmShowInvalid As New frmShowInvalid(getQuestionId())
+        frmShowInvalid.ShowDialog()
 
+        'db.sql = "SELECT * FROM [isys4283-2017fa].[dbo].[questions] WHERE invalid = 1"
+        'db.fill(dgvQuestions)
+        'db.execute()
+
+
+    End Sub
 End Class
