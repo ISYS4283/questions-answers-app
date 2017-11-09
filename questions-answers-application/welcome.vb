@@ -1,6 +1,7 @@
 ﻿
 Public Class welcome
     Protected db As New db
+
     Protected Sub LoadQuestions()
         db.sql = "SELECT * FROM questions ORDER BY created_at DESC;"
         db.fill(dgvQuestions)
@@ -28,6 +29,8 @@ Public Class welcome
         Return getQuestionValue("id")
     End Function
 
+
+
     Public Function getQuestionValue(ByVal column As String)
         Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
     End Function
@@ -46,6 +49,7 @@ Public Class welcome
     Private Sub ShowAnswersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswersToolStripMenuItem.Click
         Dim answersForm As New AnswersForm(getQuestionId())
         answersForm.ShowDialog()
-        LoadQuestions()
+
+
     End Sub
 End Class

@@ -2,6 +2,7 @@
     Protected db As New db
     Protected question_id As Integer
 
+
     Public Sub New(ByRef qid As Integer)
 
         ' This call is required by the designer.
