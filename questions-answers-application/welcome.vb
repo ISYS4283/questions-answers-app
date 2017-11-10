@@ -1,6 +1,10 @@
 ﻿
 Public Class welcome
     Protected db As New db
+    Protected Sub LoadAnswers()
+        db.sql = "SELECT * FROM answers ORDER BY created_at DESC;"
+        db.fill(dgvQuestions)
+    End Sub
     Protected Sub LoadQuestions()
         db.sql = "SELECT * FROM questions ORDER BY created_at DESC;"
         db.fill(dgvQuestions)
@@ -44,5 +48,19 @@ Public Class welcome
 
 
 
+    End Sub
+
+    Private Sub ShowAnswersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswersToolStripMenuItem.Click
+        Dim updateAnswerForm As New AnswersForm(getQuestionId())
+        updateAnswerForm.ShowDialog()
+        LoadAnswers()
+    End Sub
+
+    Private Sub FilterInvalidCheckboxesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilterInvalidCheckboxesToolStripMenuItem.Click
+        Dim checked As Integer = MessageBox.Show("Are you sure you want to filter?", "Filter", MessageBoxButtons.YesNoCancel)
+
+        If checked = DialogResult.Yes Then
+            dgvQuestions.Sort(dgvQuestions.Columns(5), System.ComponentModel.ListSortDirection.Ascending)
+        End If
     End Sub
 End Class

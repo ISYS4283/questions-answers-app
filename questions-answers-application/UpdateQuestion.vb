@@ -19,4 +19,8 @@
         db.execute()
         Me.Dispose()
     End Sub
+
+    Private Sub UpdateQuestion_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
