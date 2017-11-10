@@ -52,4 +52,8 @@ Public Class welcome
 
 
     End Sub
+
+    Private Sub ShowQuestionsWithAnswersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowQuestionsWithAnswersToolStripMenuItem.Click
+        QuestionsandAnswers.Show()
+    End Sub
 End Class

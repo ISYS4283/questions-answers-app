@@ -29,13 +29,14 @@ Partial Class welcome
         Me.DeleteQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ShowAnswersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgvQuestions = New System.Windows.Forms.DataGridView()
+        Me.ShowQuestionsWithAnswersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.welcomeMenuStrip.SuspendLayout()
         CType(Me.dgvQuestions, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'welcomeMenuStrip
         '
-        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem, Me.CreateQuestionToolStripMenuItem, Me.UpdateQuestionToolStripMenuItem, Me.DeleteQuestionToolStripMenuItem, Me.ShowAnswersToolStripMenuItem})
+        Me.welcomeMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LoadToolStripMenuItem, Me.CreateQuestionToolStripMenuItem, Me.UpdateQuestionToolStripMenuItem, Me.DeleteQuestionToolStripMenuItem, Me.ShowAnswersToolStripMenuItem, Me.ShowQuestionsWithAnswersToolStripMenuItem})
         Me.welcomeMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.welcomeMenuStrip.Name = "welcomeMenuStrip"
         Me.welcomeMenuStrip.Size = New System.Drawing.Size(1014, 24)
@@ -85,6 +86,12 @@ Partial Class welcome
         Me.dgvQuestions.Size = New System.Drawing.Size(1014, 586)
         Me.dgvQuestions.TabIndex = 1
         '
+        'ShowQuestionsWithAnswersToolStripMenuItem
+        '
+        Me.ShowQuestionsWithAnswersToolStripMenuItem.Name = "ShowQuestionsWithAnswersToolStripMenuItem"
+        Me.ShowQuestionsWithAnswersToolStripMenuItem.Size = New System.Drawing.Size(177, 20)
+        Me.ShowQuestionsWithAnswersToolStripMenuItem.Text = "Show Questions with Answers"
+        '
         'welcome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -110,4 +117,5 @@ Partial Class welcome
     Friend WithEvents UpdateQuestionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents DeleteQuestionToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ShowAnswersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ShowQuestionsWithAnswersToolStripMenuItem As ToolStripMenuItem
 End Class
