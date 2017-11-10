@@ -26,10 +26,10 @@ Partial Class AnswersForm
         Me.dgvAnswers = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.LoadAnswersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CreateAnswerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateAnswerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         CType(Me.dgvAnswers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -61,11 +61,6 @@ Partial Class AnswersForm
         Me.LoadAnswersToolStripMenuItem.Size = New System.Drawing.Size(92, 20)
         Me.LoadAnswersToolStripMenuItem.Text = "Load Answers"
         '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
-        '
         'CreateAnswerToolStripMenuItem
         '
         Me.CreateAnswerToolStripMenuItem.Name = "CreateAnswerToolStripMenuItem"
@@ -83,6 +78,11 @@ Partial Class AnswersForm
         Me.DeleteaToolStripMenuItem.Name = "DeleteaToolStripMenuItem"
         Me.DeleteaToolStripMenuItem.Size = New System.Drawing.Size(97, 20)
         Me.DeleteaToolStripMenuItem.Text = "Delete Answer "
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
         '
         'AnswersForm
         '

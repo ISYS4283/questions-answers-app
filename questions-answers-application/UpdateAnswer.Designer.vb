@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class CreateAnswer
+Partial Class UpdateAnswer
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -31,27 +31,28 @@ Partial Class CreateAnswer
         Me.TextBox1.Location = New System.Drawing.Point(12, 12)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(537, 255)
+        Me.TextBox1.Size = New System.Drawing.Size(458, 248)
         Me.TextBox1.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 273)
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(12, 275)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(537, 130)
+        Me.Button1.Size = New System.Drawing.Size(458, 115)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Submit"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'CreateAnswer
+        'UpdateAnswer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(561, 415)
+        Me.ClientSize = New System.Drawing.Size(482, 402)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox1)
-        Me.Name = "CreateAnswer"
-        Me.Text = "CreateAnswer"
+        Me.Name = "UpdateAnswer"
+        Me.Text = "UpdateAnswer"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
