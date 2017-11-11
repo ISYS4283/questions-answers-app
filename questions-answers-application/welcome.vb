@@ -1,6 +1,11 @@
 ﻿
 Public Class welcome
     Protected db As New db
+    Protected question_id As Integer
+    Protected answer_id As Integer
+
+
+
     Protected Sub LoadQuestions()
         db.sql = "SELECT * FROM questions ORDER BY created_at DESC;"
         db.fill(dgvQuestions)
@@ -47,6 +52,11 @@ Public Class welcome
         Dim answersform As New AnswersForm(getQuestionId())
         answersform.ShowDialog()
 
+    End Sub
+
+    Private Sub FilterByDateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilterByDateToolStripMenuItem.Click
+        Dim UnansweredForm As New Filterbydate(getQuestionId())
+        UnansweredForm.Show()
     End Sub
 End Class
 ' make a new form that looks at answers for a question based on the question ID, pull all answers for question ID, new, update, delete. 
