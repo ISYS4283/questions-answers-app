@@ -23,7 +23,6 @@ Partial Class QandAtogetherForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dgvQandA = New System.Windows.Forms.DataGridView()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.CloseButtonButton = New System.Windows.Forms.Button()
         CType(Me.dgvQandA, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -41,23 +40,16 @@ Partial Class QandAtogetherForm
         Me.dgvQandA.Size = New System.Drawing.Size(1222, 639)
         Me.dgvQandA.TabIndex = 0
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(403, 648)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(340, 38)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Load Questions and Answers"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'CloseButtonButton
         '
+        Me.CloseButtonButton.BackColor = System.Drawing.Color.DodgerBlue
+        Me.CloseButtonButton.ForeColor = System.Drawing.Color.White
         Me.CloseButtonButton.Location = New System.Drawing.Point(1078, 654)
         Me.CloseButtonButton.Name = "CloseButtonButton"
         Me.CloseButtonButton.Size = New System.Drawing.Size(123, 32)
         Me.CloseButtonButton.TabIndex = 2
         Me.CloseButtonButton.Text = "Close"
-        Me.CloseButtonButton.UseVisualStyleBackColor = True
+        Me.CloseButtonButton.UseVisualStyleBackColor = False
         '
         'QandAtogetherForm
         '
@@ -65,7 +57,6 @@ Partial Class QandAtogetherForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1221, 689)
         Me.Controls.Add(Me.CloseButtonButton)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvQandA)
         Me.Name = "QandAtogetherForm"
         Me.Text = "Questions with Answers"
@@ -75,6 +66,5 @@ Partial Class QandAtogetherForm
     End Sub
 
     Friend WithEvents dgvQandA As DataGridView
-    Friend WithEvents Button1 As Button
     Friend WithEvents CloseButtonButton As Button
 End Class

@@ -14,13 +14,12 @@
         LoadQ()
     End Sub
 
-    Private Sub AsnwersForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub AnswersForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadRecentAnswers()
 
     End Sub
 
-    'For loading answer based on question id
-
+    'For loading answer
     Protected Sub LoadAnswers()
         db.sql = "SELECT * FROM answers WHERE question_id = ''ORDER BY created_at DESC;"
         db.fill(dgvAnswer)
@@ -39,19 +38,15 @@
     End Sub
 
 
-    'To get quetion id on getQuestionId valiable 
+    'To get answer id on  valiable 
     Public Function getAnswerId() As Integer
         Return getAnswerValue("id")
     End Function
 
-    'To get question if value from current row selected yo update question 
+    'To get answer value from current row selected 
     Public Function getAnswerValue(ByVal column As String)
         Return dgvAnswer.Item(column, dgvAnswer.CurrentRow.Index).Value
     End Function
-
-    Private Sub CreateAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateAnswerToolStripMenuItem.Click
-
-    End Sub
 
     Private Sub DeleteAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteAnswerToolStripMenuItem.Click
         Dim confirmed As Integer = MessageBox.Show("Are you sure you want to delete this answer?", "Delete", MessageBoxButtons.YesNoCancel)
@@ -61,6 +56,7 @@
             db.execute()
             LoadRecentAnswers()
             'MsgBox("Deleted")
+
         End If
     End Sub
 

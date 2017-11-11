@@ -31,7 +31,7 @@ Public Class welcome
         Return getQuestionValue("id")
     End Function
 
-    'To get question if value from current row selected yo update question 
+    'To get question  value from current row selected to update question 
     Public Function getQuestionValue(ByVal column As String)
         Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
     End Function

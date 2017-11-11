@@ -36,7 +36,7 @@ Partial Class UpdateAnswerForm
         '
         'SubmitUpAnswerButton
         '
-        Me.SubmitUpAnswerButton.Location = New System.Drawing.Point(93, 305)
+        Me.SubmitUpAnswerButton.Location = New System.Drawing.Point(94, 327)
         Me.SubmitUpAnswerButton.Name = "SubmitUpAnswerButton"
         Me.SubmitUpAnswerButton.Size = New System.Drawing.Size(664, 141)
         Me.SubmitUpAnswerButton.TabIndex = 4
@@ -51,7 +51,7 @@ Partial Class UpdateAnswerForm
         Me.Controls.Add(Me.tbUpdateAnswerTextBox)
         Me.Controls.Add(Me.SubmitUpAnswerButton)
         Me.Name = "UpdateAnswerForm"
-        Me.Text = "UpdateAnswerForm"
+        Me.Text = "Update Answer"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

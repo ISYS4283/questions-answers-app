@@ -27,8 +27,8 @@ Partial Class welcome
         Me.CreateQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DeleteQuestionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ShowAnswerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreateAnswerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ShowAnswerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.dgvQuestions = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ExitButton = New System.Windows.Forms.Button()
@@ -71,17 +71,17 @@ Partial Class welcome
         Me.DeleteQuestionToolStripMenuItem.Size = New System.Drawing.Size(151, 29)
         Me.DeleteQuestionToolStripMenuItem.Text = "Delete Question"
         '
-        'ShowAnswerToolStripMenuItem
-        '
-        Me.ShowAnswerToolStripMenuItem.Name = "ShowAnswerToolStripMenuItem"
-        Me.ShowAnswerToolStripMenuItem.Size = New System.Drawing.Size(131, 29)
-        Me.ShowAnswerToolStripMenuItem.Text = "Show Answer"
-        '
         'CreateAnswerToolStripMenuItem
         '
         Me.CreateAnswerToolStripMenuItem.Name = "CreateAnswerToolStripMenuItem"
         Me.CreateAnswerToolStripMenuItem.Size = New System.Drawing.Size(137, 29)
         Me.CreateAnswerToolStripMenuItem.Text = "Create Answer"
+        '
+        'ShowAnswerToolStripMenuItem
+        '
+        Me.ShowAnswerToolStripMenuItem.Name = "ShowAnswerToolStripMenuItem"
+        Me.ShowAnswerToolStripMenuItem.Size = New System.Drawing.Size(131, 29)
+        Me.ShowAnswerToolStripMenuItem.Text = "Show Answer"
         '
         'dgvQuestions
         '
@@ -100,24 +100,26 @@ Partial Class welcome
         'Button1
         '
         Me.Button1.AccessibleRole = System.Windows.Forms.AccessibleRole.Sound
-        Me.Button1.ForeColor = System.Drawing.Color.Teal
+        Me.Button1.BackColor = System.Drawing.Color.DodgerBlue
+        Me.Button1.ForeColor = System.Drawing.Color.White
         Me.Button1.Location = New System.Drawing.Point(1008, 0)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(311, 31)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Show Questions with Answers" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'ExitButton
         '
         Me.ExitButton.AutoSize = True
-        Me.ExitButton.ForeColor = System.Drawing.Color.Teal
+        Me.ExitButton.BackColor = System.Drawing.Color.DodgerBlue
+        Me.ExitButton.ForeColor = System.Drawing.Color.White
         Me.ExitButton.Location = New System.Drawing.Point(1446, 0)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(75, 30)
         Me.ExitButton.TabIndex = 3
         Me.ExitButton.Text = "Exit"
-        Me.ExitButton.UseVisualStyleBackColor = True
+        Me.ExitButton.UseVisualStyleBackColor = False
         '
         'welcome
         '

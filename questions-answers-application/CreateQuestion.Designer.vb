@@ -55,7 +55,7 @@ Partial Class CreateQuestion
         Me.Controls.Add(Me.tbQuestion)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CreateQuestion"
-        Me.Text = "CreateQuestion"
+        Me.Text = "Create Question"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
