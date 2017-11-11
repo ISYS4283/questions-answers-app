@@ -1,6 +1,11 @@
 ﻿
 Public Class welcome
     Protected db As New db
+    Protected question_id As Integer
+    Protected answer_id As Integer
+
+
+
     Protected Sub LoadQuestions()
         db.sql = "SELECT * FROM questions ORDER BY created_at DESC;"
         db.fill(dgvQuestions)
@@ -31,4 +36,28 @@ Public Class welcome
     Public Function getQuestionValue(ByVal column As String)
         Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
     End Function
+
+    Private Sub DeleteQuestionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteQuestionToolStripMenuItem.Click
+        Dim confirmed As Integer = MessageBox.Show("Are you sure you want to delete this?", "Delete", MessageBoxButtons.YesNoCancel)
+
+        If confirmed = DialogResult.Yes Then
+            db.sql = "DELETE FROM questions WHERE id = @question_id"
+            db.bind("@question_id", getQuestionId())
+            db.execute()
+            LoadQuestions()
+        End If
+    End Sub
+
+    Private Sub ShowAnswersToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswersToolStripMenuItem.Click
+        Dim answersform As New AnswersForm(getQuestionId())
+        answersform.ShowDialog()
+
+    End Sub
+
+    Private Sub FilterByDateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilterByDateToolStripMenuItem.Click
+        Dim UnansweredForm As New Filterbydate(getQuestionId())
+        UnansweredForm.Show()
+    End Sub
 End Class
+' make a new form that looks at answers for a question based on the question ID, pull all answers for question ID, new, update, delete. 
+' 
