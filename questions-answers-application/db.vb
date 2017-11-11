@@ -22,8 +22,10 @@ Public Class db
         command.Parameters.AddWithValue(parameter, value)
     End Sub
 
-    ' populate a data grid view
+    'populate a data grid view
+
     Public Sub fill(ByRef dgv As DataGridView)
+
         Dim adapter As SqlDataAdapter
         Dim dataset As DataSet
 
@@ -44,9 +46,11 @@ Public Class db
                 connection.Close()
             End If
         End Try
+
     End Sub
 
-    ' execute a DML statement
+    'execute a DML statement
+
     Public Sub execute()
         Try
             connection.Open()

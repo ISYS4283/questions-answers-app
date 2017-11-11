@@ -72,6 +72,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Create Answers.Designer.vb">
+      <DependentUpon>Create Answers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Create Answers.vb" />
     <Compile Include="CreateQuestion.Designer.vb">
       <DependentUpon>CreateQuestion.vb</DependentUpon>
     </Compile>
@@ -79,6 +83,24 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="db.vb" />
+    <Compile Include="DeleteAnswer.Designer.vb">
+      <DependentUpon>DeleteAnswer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteAnswer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowAnswers.Designer.vb">
+      <DependentUpon>ShowAnswers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShowAnswers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAnswers.Designer.vb">
+      <DependentUpon>UpdateAnswers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAnswers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateQuestion.Designer.vb">
       <DependentUpon>UpdateQuestion.vb</DependentUpon>
     </Compile>
@@ -109,14 +131,26 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Create Answers.resx">
+      <DependentUpon>Create Answers.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateQuestion.resx">
       <DependentUpon>CreateQuestion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteAnswer.resx">
+      <DependentUpon>DeleteAnswer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowAnswers.resx">
+      <DependentUpon>ShowAnswers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAnswers.resx">
+      <DependentUpon>UpdateAnswers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateQuestion.resx">
       <DependentUpon>UpdateQuestion.vb</DependentUpon>
