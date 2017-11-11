@@ -47,6 +47,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ISYS4283.DbWrapper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ISYS4283.DbWrapper.0.4.0\lib\net452\ISYS4283.DbWrapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -72,6 +75,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswersForm.Designer.vb">
+      <DependentUpon>AnswersForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnswersForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAnswerForm.Designer.vb">
+      <DependentUpon>CreateAnswerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAnswerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateQuestion.Designer.vb">
       <DependentUpon>CreateQuestion.vb</DependentUpon>
     </Compile>
@@ -79,6 +94,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="db.vb" />
+    <Compile Include="QandAtogetherForm.Designer.vb">
+      <DependentUpon>QandAtogetherForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QandAtogetherForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateAnswerForm.Designer.vb">
+      <DependentUpon>UpdateAnswerForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAnswerForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateQuestion.Designer.vb">
       <DependentUpon>UpdateQuestion.vb</DependentUpon>
     </Compile>
@@ -109,6 +136,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AnswersForm.resx">
+      <DependentUpon>AnswersForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAnswerForm.resx">
+      <DependentUpon>CreateAnswerForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateQuestion.resx">
       <DependentUpon>CreateQuestion.vb</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +150,12 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QandAtogetherForm.resx">
+      <DependentUpon>QandAtogetherForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAnswerForm.resx">
+      <DependentUpon>UpdateAnswerForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateQuestion.resx">
       <DependentUpon>UpdateQuestion.vb</DependentUpon>
@@ -136,6 +175,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -28,31 +28,34 @@ Partial Class CreateQuestion
         '
         'tbQuestion
         '
-        Me.tbQuestion.Location = New System.Drawing.Point(12, 12)
+        Me.tbQuestion.Location = New System.Drawing.Point(18, 18)
+        Me.tbQuestion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tbQuestion.Multiline = True
         Me.tbQuestion.Name = "tbQuestion"
-        Me.tbQuestion.Size = New System.Drawing.Size(546, 208)
+        Me.tbQuestion.Size = New System.Drawing.Size(817, 318)
         Me.tbQuestion.TabIndex = 0
         '
         'btnQuestionSubmit
         '
         Me.btnQuestionSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnQuestionSubmit.Location = New System.Drawing.Point(12, 227)
+        Me.btnQuestionSubmit.Location = New System.Drawing.Point(18, 349)
+        Me.btnQuestionSubmit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnQuestionSubmit.Name = "btnQuestionSubmit"
-        Me.btnQuestionSubmit.Size = New System.Drawing.Size(546, 107)
+        Me.btnQuestionSubmit.Size = New System.Drawing.Size(819, 165)
         Me.btnQuestionSubmit.TabIndex = 1
         Me.btnQuestionSubmit.Text = "Submit"
         Me.btnQuestionSubmit.UseVisualStyleBackColor = True
         '
         'CreateQuestion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(570, 344)
+        Me.ClientSize = New System.Drawing.Size(855, 529)
         Me.Controls.Add(Me.btnQuestionSubmit)
         Me.Controls.Add(Me.tbQuestion)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "CreateQuestion"
-        Me.Text = "CreateQuestion"
+        Me.Text = "Create Question"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

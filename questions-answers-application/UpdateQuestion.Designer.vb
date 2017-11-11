@@ -29,30 +29,33 @@ Partial Class UpdateQuestion
         'btnUpdateQuestionSubmit
         '
         Me.btnUpdateQuestionSubmit.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnUpdateQuestionSubmit.Location = New System.Drawing.Point(12, 346)
+        Me.btnUpdateQuestionSubmit.Location = New System.Drawing.Point(18, 532)
+        Me.btnUpdateQuestionSubmit.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.btnUpdateQuestionSubmit.Name = "btnUpdateQuestionSubmit"
-        Me.btnUpdateQuestionSubmit.Size = New System.Drawing.Size(504, 104)
+        Me.btnUpdateQuestionSubmit.Size = New System.Drawing.Size(756, 160)
         Me.btnUpdateQuestionSubmit.TabIndex = 0
         Me.btnUpdateQuestionSubmit.Text = "Submit"
         Me.btnUpdateQuestionSubmit.UseVisualStyleBackColor = True
         '
         'tbUpdateQuestion
         '
-        Me.tbUpdateQuestion.Location = New System.Drawing.Point(12, 12)
+        Me.tbUpdateQuestion.Location = New System.Drawing.Point(18, 18)
+        Me.tbUpdateQuestion.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.tbUpdateQuestion.Multiline = True
         Me.tbUpdateQuestion.Name = "tbUpdateQuestion"
-        Me.tbUpdateQuestion.Size = New System.Drawing.Size(504, 328)
+        Me.tbUpdateQuestion.Size = New System.Drawing.Size(754, 502)
         Me.tbUpdateQuestion.TabIndex = 1
         '
         'UpdateQuestion
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(528, 462)
+        Me.ClientSize = New System.Drawing.Size(792, 711)
         Me.Controls.Add(Me.tbUpdateQuestion)
         Me.Controls.Add(Me.btnUpdateQuestionSubmit)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "UpdateQuestion"
-        Me.Text = "UpdateQuestion"
+        Me.Text = "Update Question"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

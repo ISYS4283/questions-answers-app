@@ -44,6 +44,10 @@ Public Class db
                 connection.Close()
             End If
         End Try
+
+        command.CommandText = Nothing
+        command.Parameters.Clear()
+
     End Sub
 
     ' execute a DML statement
@@ -59,5 +63,8 @@ Public Class db
                 connection.Close()
             End If
         End Try
+
+        command.CommandText = Nothing
+        command.Parameters.Clear()
     End Sub
 End Class
