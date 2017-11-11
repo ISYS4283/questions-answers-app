@@ -1,6 +1,7 @@
-﻿
+﻿Imports System.Data.SqlClient
 Public Class welcome
     Protected db As New db
+
     Protected Sub LoadQuestions()
         db.sql = "SELECT * FROM questions ORDER BY created_at DESC;"
         db.fill(dgvQuestions)
@@ -31,4 +32,29 @@ Public Class welcome
     Public Function getQuestionValue(ByVal column As String)
         Return dgvQuestions.Item(column, dgvQuestions.CurrentRow.Index).Value
     End Function
+
+    Private Sub DeleteQuestionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DeleteQuestionToolStripMenuItem.Click
+        Dim confirmed As Integer = MessageBox.Show("Are you sure you want to delete this?", "Delete", MessageBoxButtons.YesNoCancel)
+
+        If confirmed = DialogResult.Yes Then
+            MsgBox("Deleted")
+            db.sql = "DELETE FROM questions WHERE id = @question_id"
+            db.bind("@question_id", getQuestionId())
+            db.execute()
+            LoadQuestions()
+
+        End If
+    End Sub
+
+    Private Sub ShowAnswerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ShowAnswersToolStripMenuItem.Click
+        'Dim answersForm As New AnswersForm(getQuestionId())
+        'AnswersForm.ShowDialog()
+        My.Forms.ShowAnswers.Show()
+    End Sub
+
+    Private Sub dgvQuestions_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvQuestions.CellContentClick
+
+    End Sub
+
+
 End Class
