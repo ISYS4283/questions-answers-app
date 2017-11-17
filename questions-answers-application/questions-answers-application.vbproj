@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnswersForm.Designer.vb">
+      <DependentUpon>AnswersForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AnswersForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAnswer.Designer.vb">
+      <DependentUpon>CreateAnswer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAnswer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateQuestion.Designer.vb">
       <DependentUpon>CreateQuestion.vb</DependentUpon>
     </Compile>
@@ -79,6 +91,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="db.vb" />
+    <Compile Include="UpdateAnswer.Designer.vb">
+      <DependentUpon>UpdateAnswer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateAnswer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateQuestion.Designer.vb">
       <DependentUpon>UpdateQuestion.vb</DependentUpon>
     </Compile>
@@ -109,6 +127,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AnswersForm.resx">
+      <DependentUpon>AnswersForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAnswer.resx">
+      <DependentUpon>CreateAnswer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateQuestion.resx">
       <DependentUpon>CreateQuestion.vb</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +141,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateAnswer.resx">
+      <DependentUpon>UpdateAnswer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateQuestion.resx">
       <DependentUpon>UpdateQuestion.vb</DependentUpon>
